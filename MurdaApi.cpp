@@ -116,7 +116,7 @@ int main()
     update();
     main.updated = true;
     needsToBeUpdated = false;
-    if(main.updated == false) {
+    if(main.updated == false || main.updated == NULL) {
       std::cout << RED << "FATAL ERROR DETECTED\n";
       std::cout << GRN << "RETRYING.";
       std::this_thread::sleep_for(std::chrono::milliseconds(1000));
